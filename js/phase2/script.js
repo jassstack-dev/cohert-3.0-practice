@@ -388,12 +388,49 @@ console.log(veg)
 console.log(veg2)
 // 4. Find index of an element.
 
+const arr5 = [1,2,4,5]
+console.log(arr5.indexOf(4))
+
 
 // 5. Check if array contains a value.
+const array1 = [1,3,4,5]
+
+if(array1.includes(3)){
+    console.log('array not null')
+}else{
+    console.log("array null")
+}
 // 6. Join array elements with .
+const v = ["tomato", "potato"]
+console.log(v.join("."))
 // 7. Merge two arrays using spread operator.
+const a1 = ["vimal", "jass"]
+const a2 = ["priyanka", "jyoti"]
+
+const a3 = [...a1,...a2]
+console.log(a3)
 // 8. Copy array using spread operator.
+
+let a4 = [...a1]
+
+
+a4.push("tanu")
+console.log(a4)
+
+
 // 9. Find maximum value using `Math.max`.
+
+const num7 = [1,6,4,19]
+let max = Math.max(...num7)
+console.log(max)
+
 // 10. Swap two variables using destructuring.
 
+let u = 9;
+let k = 20;
+
+[u,k] = [k,u]
+
+console.log(u)
+console.log(k)
 
