@@ -118,4 +118,162 @@ const marks = {
   Aman: 90
 }
 
-console.log(Math.max(...Object.values(marks)))
+let highestMarks = Math.max(...Object.values(marks))
+
+const name = Object.keys(marks).find(
+    key => marks[key] === highestMarks
+)
+
+console.log(name)
+
+// find total salary 
+const salaries = {
+  john: 1000,
+  alex: 2000,
+  bob: 1500
+}
+
+const salariesSum = Object.values(salaries).reduce((tot, num)=>{
+    return tot + num
+},0)
+
+console.log(salariesSum)
+
+
+// print city, pincode
+
+const users = {
+  name: "Anubhav",
+  address: {
+    city: "Bhopal",
+    pincode: 462001
+  }
+}
+
+console.log(users.address.city)
+console.log(users.address.pincode)
+
+// Create an object with:
+
+// - name
+// - marks
+// - method called `getResult`
+
+const employee = {
+    name: "vimal",
+    marks : 56,
+    getResult : function(){
+        return this.marks >40 ? "pass" : "Failed"
+    }
+}
+
+console.log(employee.getResult())
+
+
+// convert array to in object
+const arr = [["name", "Anubhav"], ["age", 24]]
+
+let obj = Object.fromEntries(arr)
+console.log(obj)
+
+
+// Count frequency of each character.
+
+const veer = "veera"
+
+const freq = {};
+
+for(let char of veer){
+    if(freq[char]){
+        freq[char]++
+    }else{
+        freq[char] = 1
+    }
+}
+
+console.log(freq)
+
+
+// Group users by age.
+
+const Users = [
+  { name: "A", age: 20 },
+  { name: "B", age: 21 },
+  { name: "C", age: 20 }
+]
+
+const result = {}
+
+for(let user of Users){
+    if(!result[user.age]){
+        result[user.age] = []
+    }
+        result[user.age].push(user)
+    
+}
+
+console.log(result)
+
+
+// Check whether this property exists:
+// "user.address.city"
+// inside an object dynamically.
+// Hint:
+// Use:
+// split(".")
+
+const bro = {
+    friend : "rahul",
+    address: {
+        city : "aligarh",
+        pin : "3567378"
+    }
+}
+
+const property = "address.city";
+
+let keys = property.split(".")
+
+let current = bro;
+
+for (let key of keys) {
+    if (key in current) {
+        current = current[key];
+    } else {
+        console.log(false);
+        break;
+    }
+}
+
+console.log(true);
+
+
+// Check if two objects have same keys and values.
+
+const a = {a:1,b:2}
+const b = {a:1,b:2}
+
+// i cant solve it right now bcz samajh ni aa rha how am i solve it  
+
+
+
+// Remove duplicate objects from array based on id.
+const id = [
+  {id:1,name:"A"},
+  {id:2,name:"B"},
+  {id:1,name:"A"}
+]
+
+const ids = {}
+
+for(let key of id){
+    if(ids[id.key]){
+        ids[id.key]++
+    }else{
+        ids[id.key] = 1
+    }
+}
+
+console.log()
+
+//
