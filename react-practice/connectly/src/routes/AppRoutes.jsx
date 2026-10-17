@@ -4,6 +4,7 @@ import DashboardLayout from '../layout/DashboardLayout'
 import Dashboard from '../pages/Dashboard'
 import Leads from '../pages/Leads'
 import CreateLead from '../pages/CreateLead'
+import LeadDetails from '../pages/LeadDetails'
 
 const AppRoutes = () => {
     const router = createBrowserRouter([
@@ -20,6 +21,9 @@ const AppRoutes = () => {
             },{
                 path: 'create-leads',
                 element:<CreateLead/>
+            },{
+                path: 'lead-details/:id',
+                element: <LeadDetails/>
             }
         ]
         }

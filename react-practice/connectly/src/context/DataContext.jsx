@@ -24,8 +24,9 @@ export const DataContextApi = ({ children }) => {
 //   console.log(updateLead)
 
   function updateBtn(id) {
+   
    const updated = leads.find((val)=> val.id === id)
-   setUpdateLead(updated)
+   setUpdateLead(updated || null)
   }
 
   return (

@@ -9,7 +9,7 @@ export        const mockLeads = [
     industry: "IT Services",
     stage: "New",
     priority: "High",
-    price: 75000,
+    estimatedValue: 75000,
     notes: "Interested in a business website.",
     createdAt: "2026-10-01",
   },
