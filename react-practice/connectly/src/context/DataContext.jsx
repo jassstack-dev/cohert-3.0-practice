@@ -21,7 +21,7 @@ export const DataContextApi = ({ children }) => {
 
   const [updatePopup, setUpdatePopup] = useState(false);
   const [updateLead, setUpdateLead] = useState(null)
-//   console.log(updateLead)
+
 
   function updateBtn(id) {
    

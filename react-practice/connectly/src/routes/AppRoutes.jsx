@@ -9,7 +9,7 @@ import LeadDetails from '../pages/LeadDetails'
 const AppRoutes = () => {
     const router = createBrowserRouter([
         {
-            path: '/dashbaord',
+            path: '/dashboard',
             element: <DashboardLayout/>,
             children: [{
                 path: '',
