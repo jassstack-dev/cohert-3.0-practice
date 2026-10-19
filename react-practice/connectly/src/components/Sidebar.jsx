@@ -16,6 +16,8 @@ const Sidebar = () => {
   const { setUpdatePopup, setUpdateLead } = useContext(store);
   const [isOpen, setIsOpen] = useState(false);
 
+ 
+
   return (
     <>
       {/* Mobile Header */}
@@ -108,6 +110,20 @@ const Sidebar = () => {
             >
               <Headset className="w-5 h-5" />
               <span className="text-sm font-semibold">Create Leads</span>
+            </NavLink>
+ 
+            {/* follow-up  */}
+            <NavLink
+              
+              to="/dashboard/follow-up"
+              className={({ isActive }) =>
+                isActive
+                  ? "flex items-center gap-3 px-3 py-3 rounded-xl bg-indigo-50 text-indigo-600"
+                  : "flex items-center gap-3 px-3 py-3 rounded-xl text-gray-600"
+              }
+            >
+              <Headset className="w-5 h-5" />
+              <span className="text-sm font-semibold">Follow Up</span>
             </NavLink>
           </nav>
         </div>

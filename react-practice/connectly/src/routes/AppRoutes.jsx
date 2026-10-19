@@ -5,6 +5,8 @@ import Dashboard from '../pages/Dashboard'
 import Leads from '../pages/Leads'
 import CreateLead from '../pages/CreateLead'
 import LeadDetails from '../pages/LeadDetails'
+import FollowUp from '../components/FollowUp'
+import FollowUpDetails from '../pages/FollowUpDetails'
 
 const AppRoutes = () => {
     const router = createBrowserRouter([
@@ -24,6 +26,12 @@ const AppRoutes = () => {
             },{
                 path: 'lead-details/:id',
                 element: <LeadDetails/>
+            },{
+                path: 'follow-up',
+                element: <FollowUp/>
+            },{
+                path: 'detail-follow-up/:id',
+                element: <FollowUpDetails/>
             }
         ]
         }

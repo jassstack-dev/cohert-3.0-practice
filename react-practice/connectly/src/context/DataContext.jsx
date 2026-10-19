@@ -29,6 +29,32 @@ export const DataContextApi = ({ children }) => {
    setUpdateLead(updated || null)
   }
 
+  // follow up data
+ const [followUpData, setFollowUpData] = useState([])
+ 
+ console.log(followUpData)
+
+
+
+
+useEffect(()=>{
+      const leadsData = leads.map((val)=>{
+    return {
+        id: val.id,
+        company : val.companyName,
+        stage: val.stage,
+        createdAt: val.createdAt,
+        description :null,
+        type: null,
+        LastCall: null,
+followUpDate: null
+    }
+  })
+  setFollowUpData(leadsData)
+
+}, [leads])
+
+
   return (
     <store.Provider
       value={{
@@ -41,7 +67,9 @@ export const DataContextApi = ({ children }) => {
         updatePopup,
         setUpdatePopup,
         updateLead, 
-        setUpdateLead
+        setUpdateLead,
+        followUpData, 
+        setFollowUpData
       }}
     >
       {children}
